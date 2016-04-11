@@ -7,9 +7,9 @@
 // Public dependencies.
 const _ = require('lodash');
 
-var YouTube = require('youtube-node');
-var youTube = new YouTube();
-youTube.setKey('AIzaSyBkliEwvCl4fyY7cA1pipoFdGNyoqxyOTg');
+var request = require('request');
+var baseUrl = "https://www.googleapis.com/youtube/v3"
+var youtubeApiKey = "AIzaSyBkliEwvCl4fyY7cA1pipoFdGNyoqxyOTg";
 
 /**
  * A set of functions called "actions" for `Video`
@@ -25,16 +25,20 @@ module.exports = {
 
   search: function (params) {
     return new Promise(function(resolve, reject) {
-      youTube.search(params.term, 2, function(error, results) {
-        if (error) {
-          reject(error);
+      var url = baseUrl + "/search?part=snippet&q=" + params.term + "&type=video&key=" + youtubeApiKey;
+
+      request(url, function (error, response, body) {
+        if (!error && response.statusCode == 200) {
+          resolve(body);
+        } else {
+          reject(body);
         }
-        else {
-          resolve(results);
-        }
-        
-      });
+      })
     });
-  }
-  
+  },
+
+  // _buildUrl: function (base, params, key) {
+
+  // }
+
 };
