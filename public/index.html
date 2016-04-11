@@ -3,41 +3,63 @@
 <!doctype html>
 <html>
 <head>
-  <meta charset="utf-8">
-  <title>Yoyo Tube</title>
+  	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <!-- CSS -->
-  <link rel="stylesheet" href="components/bootstrap/dist/css/bootstrap.min.css">
+ 	 <title>Yoyo Tube</title>
+
+	<!-- CSS / JS -->
+	<link rel="stylesheet" href="components/bootstrap/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/main.css">
+	<script type="text/javascript" src="components/jquery/dist/jquery.min.js"></script>
+	<script type="text/javascript" src="components/bootstrap/dist/js/bootstrap.min.js"></script>
 
 </head>
 <body>
 
-  <!-- navigation bar -->
-  <nav class="navbar navbar-default">
-    <div class="container-fluid">
-      <a class="navbar-brand"><i class="glyphicon glyphicon-bullhorn"></i> YoYoTube</a>
-    </div>
-  </nav>
+	<div class="site-wrapper" id="videos">
 
-  <!-- main body of our application -->
-  <div class="container" id="videos">
+		<div class="masthead clearfix">
+			<div class="inner">
+			  <h3 class="masthead-brand">YOYOTUBE</h3>
+			  <nav>
+			    <ul class="nav masthead-nav">
+			      <li class="active"><a href="#">Search</a></li>
+			      <li><a href="#">Random</a></li>
+			      <li><a href="#">Trending</a></li>
+			    </ul>
+			  </nav>
+			</div>
+		</div>
 
-    <!-- show the events -->
-    <div class="col-sm-6">
-    	<input type="text" v-model="term" placeholder="Search" debounce="500">
-      	<div class="list-group">
+		<div class="inner">
+			<h1 class="cover-heading">YOYOTUBE.</h1>
+			<p class="lead">The best of Youtube.</p>
+			<p class="lead">
+			  <input type="text" v-model="term" placeholder="Search" debounce="500">
+			</p>
+		</div>
 
-			<a href="#" class="list-group-item" v-for="video in videos">
-				<h4 class="list-group-item-heading">
-					<i class="glyphicon glyphicon-bullhorn"></i> 
+	  	<div>
+			<a href="https://www.youtube.com/watch?v={{ video.id.videoId }}" v-for="video in videos" target="_blank">
+				<h4>
 					{{ video.snippet.title }}
 				</h4>
 			</a>
 
 		</div>
-    </div>
 
-  </div>
+
+
+		<div class="mastfoot">
+			<div class="inner">
+			  <p>Made with Youtube API, <a href="http://getbootstrap.com">Bootstrap</a>, <a href="http://strapi.io">Strapi</a> and <a href="http://vuejs.org">Vue.js</a> by <a href="https://twitter.com/superskully">Maxou</a>.</p>
+			</div>
+		</div>
+
+    </div>
+  
 
   <!-- JS -->
   <script src="components/vue/dist/vue.js"></script>
