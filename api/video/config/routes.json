@@ -1,0 +1,9 @@
+{
+  "routes": {
+    "GET /search/:term": {
+      "controller": "Video",
+      "action": "search",
+      "policies": []
+    }
+  }
+}
