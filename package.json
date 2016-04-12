@@ -12,7 +12,6 @@
     "socket.io": "~1.4.5",
     "sqlite3": "~3.1.1",
     "strapi": "~2.0.0",
-    "strapi-bookshelf": "~2.0.0",
     "strapi-knex": "~2.0.0"
   },
   "main": "./server.js",
