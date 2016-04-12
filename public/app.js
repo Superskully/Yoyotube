@@ -8,7 +8,8 @@ var vm = new Vue({
   data: {
 	  video: { name: '', description: '', date: '' },
 	  videos: [],
-	  term: ""
+	  term: "",
+	  location: "world"
 	},
 
 	// Anything within the ready function will run when the application loads

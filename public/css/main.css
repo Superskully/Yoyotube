@@ -97,6 +97,27 @@ body {
   }
 }
 
+
+.form-yt {
+  max-width: 500px;
+  margin: 30px auto;
+}
+
+.content {
+  margin: 0 auto;
+}
+.content-videos {
+  max-width: 960px;
+  margin: 50px auto;
+}
+.col-md-4 {
+  min-width: 320px;
+  padding: 0;
+}
+.img-video {
+  max-width:100%;
+}
+
 /*
  * Footer
  */
