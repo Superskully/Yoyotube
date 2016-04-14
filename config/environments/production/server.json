@@ -1,0 +1,22 @@
+{
+  "frontendUrl": "",
+  "port": 80,
+  "reload": {
+    "timeout": 1000,
+    "workers": 0
+  },
+  "logger": true,
+  "parser": {
+    "encode": "utf-8",
+    "formLimit": "56kb",
+    "jsonLimit": "1mb",
+    "strict": true,
+    "extendTypes": {
+      "json": [
+        "application/x-javascript"
+      ]
+    }
+  },
+  "gzip": true,
+  "responseTime": true
+}
