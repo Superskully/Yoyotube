@@ -16,7 +16,7 @@ var vm = new Vue({
 	ready: function() {
 	  // When the application loads, we want to call the method that initializes
 	  // some data
-	  // this.fetchVideos('war');
+	  this.fetchVideos('oficel');
 	},
 
 	// Methods we want to use in our application are registered here

@@ -43,7 +43,7 @@
 
 			<div class="row content-videos">
 				<div class="col-md-4" v-for="video in videos">
-					<a href="https://www.youtube.com/watch?v={{ video.id.videoId }}" target="_blank">
+					<a class="container-video" href="https://www.youtube.com/watch?v={{ video.id.videoId }}" target="_blank">
 						<img :src="video.snippet.thumbnails.medium.url" class="img-video">
 					</a>
 				</div>

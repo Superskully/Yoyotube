@@ -25,7 +25,7 @@ module.exports = {
 
   search: function (params) {
     return new Promise(function(resolve, reject) {
-      var url = baseUrl + "/search?part=snippet&publishAfter=2016-04-05T00:00:00Z&safeSearch=none&maxResults=12&regionCode=RU&order=date&q=" + params.term + "&type=video&key=" + youtubeApiKey;
+      var url = baseUrl + "/search?part=snippet&publishAfter=2016-04-05T00:00:00Z&safeSearch=none&maxResults=12&order=date&q=" + params.term + "&type=video&key=" + youtubeApiKey;
 
       request(url, function (error, response, body) {
         if (!error && response.statusCode == 200) {
