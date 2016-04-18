@@ -1,6 +1,6 @@
 {
   "frontendUrl": "",
-  "port": 80,
+  "port": 8080,
   "reload": {
     "timeout": 1000,
     "workers": 0

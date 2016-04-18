@@ -1,7 +1,7 @@
 {
   "static": true,
   "views": false,
-  "websockets": true,
+  "websockets": false,
   "favicon": {
     "path": "favicon.ico",
     "maxAge": 86400000
